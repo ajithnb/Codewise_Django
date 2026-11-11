@@ -1,0 +1,63 @@
+
+###
+GET http://127.0.0.1:8000/questions/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/questions/
+Content-Type: application/json
+
+{
+    "title": "Factorial of a Number",
+    "languages": "python",
+    "difficulty_level": "easy",
+    "notes": "Write a program to find the factorial of a given number.",
+    "topic": "Loops",
+    "sample_input": "5",
+    "sample_output": "120",
+    "is_active": true
+}
+
+###
+GET http://127.0.0.1:8000/questions/1/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/questions/3/
+Content-Type: application/json
+
+{
+	"title" : "python program to find the given number is Armstrong or not",
+	"language" : "python",
+	"difficulty_level" : "easy",
+	"notes" : "this ia a sample question based on while loop in python",
+	"topic" : "loops",
+	"sample_input" : "153",
+	"sample_output" : "153 is an a armstrong number",
+	"is_active" : true
+
+}
+
+###
+POST http://127.0.0.1:8000/submission/
+Content-Type: application/json
+
+{
+    "answer":"it is prime number",
+    "question_id":1,
+    "owner":"john"
+    
+}
+
+###
+GET http://127.0.0.1:8000/submission/1/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/evaluvate/1/
+Content-Type: application/json
+
+{
+    "points":5,
+    "remarks":"very very good"
+}
